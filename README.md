@@ -1,7 +1,7 @@
 # plt-ssn
 Grab up-to-date sunspot count numbers, and generate a few plots
 
-### Background
+## Background
 Using the data from the Sunspot Index and Long-term Solar Observations -or- [SILSO](http://sidc.be/silso/home) database, the sunspot number is displayed in a series of two plots.
 
 The datasets employed are:
@@ -12,5 +12,14 @@ The datasets employed are:
 The first plot will display the total sunspot number, overlaid with the hemispheric sunspot number for reference.
 The second plot will display the hemispheric sunspot number, shading to indicate the dominant hemisphere.
 
-### To-do list:
+### Python requirements
+- python 2.7+
+- numpy
+- pandas
+- os
+- brewer2mpl
+- matplotlib
+
+
+## To-do list:
 - Utilize sunspot number forecast data cleverly into plots
