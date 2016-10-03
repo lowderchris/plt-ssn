@@ -22,4 +22,4 @@ The second plot will display the hemispheric sunspot number, shading to indicate
 
 
 ## To-do list:
-- Utilize sunspot number forecast data cleverly into plots
+- Think of more items to-do.
