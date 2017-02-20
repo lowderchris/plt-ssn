@@ -28,7 +28,8 @@ dp = pandas.read_csv('KFprediCM.txt', sep='\s+', header=None, names=dcolsp)
 # Plot the entire range of sunspot data
 
 # Generate a figure
-f1, (ax0) = pyplot.subplots(1, figsize=[6,2])
+#f1, (ax0) = pyplot.subplots(1, figsize=[6,2])
+f1, (ax0) = pyplot.subplots(1)
 
 # Plot full range of historical sunspot number data
 ax0.plot(d['t'], d['tsn'], 'k', label='Total')
@@ -40,9 +41,11 @@ ax0.plot(dh['t'], dh['ssn'], color=cols[8], label='Southern hemisphere')
 # Tidy up the plot ranges, and label
 ax0.set_ylim([0,500])
 ax0.set_xlim([1740,2020])
-ax0.legend(ncol=3)
+ax0.legend()
 ax0.set_xlabel('Year')
 ax0.set_ylabel('Sunspot number')
+
+pyplot.tight_layout()
 
 # Save figures to disk
 pyplot.savefig('ssn_full.pdf')
@@ -52,7 +55,8 @@ pyplot.savefig('ssn_full.png', transparent='True')
 # Plot the range of hemispheric sunspot data
 
 # Generate a figure
-f2, (ax0) = pyplot.subplots(1, figsize=[6,2])
+#f2, (ax0) = pyplot.subplots(1, figsize=[6,2])
+f2, (ax0) = pyplot.subplots(1)
 
 # Plot hemispheric sunspot number
 ax0.plot(dh['t'], dh['nsn'], color=cols[2], label='Northern hemisphere')
@@ -69,6 +73,8 @@ ax0.legend()
 ax0.set_xlabel('Year')
 ax0.set_ylabel('Sunspot number')
 
+pyplot.tight_layout()
+
 # Save figures to disk
 pyplot.savefig('ssn_hemi.pdf')
 pyplot.savefig('ssn_hemi.png', transparent='True')
@@ -77,7 +83,8 @@ pyplot.savefig('ssn_hemi.png', transparent='True')
 # Plot the past few cycles, and an outlook on the future...
 
 # Generate a figure
-f1, (ax0) = pyplot.subplots(1, figsize=[4,3])
+#f1, (ax0) = pyplot.subplots(1, figsize=[4,3])
+f1, (ax0) = pyplot.subplots(1)
 
 # Plot full range of historical sunspot number data
 ax0.plot(d['t'], d['tsn'], 'k', label='Total')
