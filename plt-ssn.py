@@ -39,8 +39,8 @@ ax0.plot(dh['t'], dh['nsn'], color=cols[2], label='Northern hemisphere')
 ax0.plot(dh['t'], dh['ssn'], color=cols[8], label='Southern hemisphere')
 
 # Tidy up the plot ranges, and label
-ax0.set_ylim([0,500])
-ax0.set_xlim([1740,2020])
+ax0.set_ylim(0)
+#ax0.set_xlim([1740,2020])
 ax0.legend()
 ax0.set_xlabel('Year')
 ax0.set_ylabel('Sunspot number')
@@ -67,8 +67,8 @@ ax0.fill_between(dh['t'], dh['nsn'], dh['ssn'], where=dh['nsn']>dh['ssn'], facec
 ax0.fill_between(dh['t'], dh['nsn'], dh['ssn'], where=dh['ssn']>dh['nsn'], facecolor=cols[8], interpolate=True)
 
 # Tidy up the plot ranges, and label
-ax0.set_ylim([0,160])
-ax0.set_xlim([1991,2016])
+ax0.set_ylim(0)
+#ax0.set_xlim([1991,2020])
 ax0.legend()
 ax0.set_xlabel('Year')
 ax0.set_ylabel('Sunspot number')
@@ -93,8 +93,8 @@ ax0.fill_between(dp['t'], dp['tsn']+dp['unc'], dp['tsn']-dp['unc'], color=cols[6
 ax0.plot(dp['t'], dp['tsn'], color=cols[8], label='KF CM Pred.')
 
 # Tidy up the plot ranges, and label
-ax0.set_ylim([0,250])
-ax0.set_xlim([1995,2020])
+ax0.set_ylim(0)
+ax0.set_xlim([1995,2023])
 ax0.legend()
 ax0.set_xlabel('Year')
 ax0.set_ylabel('Sunspot number')
