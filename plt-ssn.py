@@ -1,11 +1,11 @@
 import pandas
 import os
-import brewer2mpl
+import palettable
 import matplotlib
 from matplotlib import pyplot
 
 # Define a color palatte for later use
-cols = (brewer2mpl.get_map('RdBu', 'Diverging', 11)).mpl_colors
+cols = palettable.colorbrewer.diverging.RdBu_11.mpl_colors
 
 # Grab current sunspot number data from the SILSO dataset
 os.system('curl -O http://sidc.oma.be/silso/DATA/SN_m_tot_V2.0.txt')
