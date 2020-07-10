@@ -22,7 +22,9 @@ dh = pandas.read_csv('SN_m_hem_V2.0.txt', sep='\s+',header=None, names=dcolsh)
 dp = pandas.read_csv('KFprediCM.txt', sep='\s+', header=None, names=dcolsp)
 
 ## Toggle keynote mode on and off
-#keynote_figs()
+keynote_figs()
+lc = 'w'
+# lc = 'k'
 
 #####
 # Plot the entire range of sunspot data
@@ -32,7 +34,7 @@ dp = pandas.read_csv('KFprediCM.txt', sep='\s+', header=None, names=dcolsp)
 f1, (ax0) = pyplot.subplots(1)
 
 # Plot full range of historical sunspot number data
-ax0.plot(d['t'], d['tsn'], 'k', label='Total')
+ax0.plot(d['t'], d['tsn'], lc, label='Total')
 
 # Plot hemispheric sunspot number
 ax0.plot(dh['t'], dh['nsn'], color=cols[2], label='Northern hemisphere')
@@ -87,13 +89,13 @@ pyplot.savefig('ssn_hemi.png', transparent='True')
 f1, (ax0) = pyplot.subplots(1)
 
 # Plot full range of historical sunspot number data
-ax0.plot(d['t'], d['tsn'], 'k', label='Total')
+ax0.plot(d['t'], d['tsn'], lc, label='Total')
 
 ax0.fill_between(dp['t'], dp['tsn']+dp['unc'], dp['tsn']-dp['unc'], color=cols[6])
 ax0.plot(dp['t'], dp['tsn'], color=cols[8], label='KF CM Pred.')
 
 # Tidy up the plot ranges, and label
-ax0.set_ylim(0)
+ax0.set_ylim([0,275])
 ax0.set_xlim([1995,2023])
 ax0.legend()
 ax0.set_xlabel('Year')
