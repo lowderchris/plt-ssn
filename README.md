@@ -19,7 +19,3 @@ The second plot will display the hemispheric sunspot number, shading to indicate
 - os
 - brewer2mpl
 - matplotlib
-
-
-## To-do list:
-- Think of more items to-do.
