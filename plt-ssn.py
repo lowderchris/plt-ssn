@@ -11,9 +11,9 @@ from matplotlib import pyplot
 cols = palettable.colorbrewer.diverging.RdBu_11.mpl_colors
 
 # Grab current sunspot number data from the SILSO dataset
-os.system('curl -O https://wwwbis.sidc.be/silso/DATA/SN_m_tot_V2.0.txt')
-os.system('curl -O https://wwwbis.sidc.be/silso/DATA/SN_m_hem_V2.0.txt')
-os.system('curl -O https://wwwbis.sidc.be/silso/FORECASTS/KFprediCM.txt')
+os.system('curl -O https://www.sidc.be/silso/DATA/SN_m_tot_V2.0.txt')
+os.system('curl -O https://www.sidc.be/silso/DATA/SN_m_hem_V2.0.txt')
+os.system('curl -O https://www.sidc.be/silso/FORECASTS/KFprediCM.txt')
 
 # Define column headers, and read in the data!
 dcols = ['yy', 'mm', 't', 'tsn', 'snsd', 'nobs', 'def']
